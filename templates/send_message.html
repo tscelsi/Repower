@@ -1,0 +1,28 @@
+{% extends 'layout.html' %}
+
+{% block body %}
+<div class="container">
+  <div class="">
+
+    <form action="/send_message_active" method="post">
+        <textarea name="message" rows="8" cols="80"></textarea>
+
+        {% with messages = get_flashed_messages() %}
+          {% if messages %}
+            <ul class=flashes>
+            {% for message in messages %}
+              <li>{{ message }}</li>
+            {% endfor %}
+            </ul>
+          {% endif %}
+        {% endwith %}
+        {% for row in rows %}
+        <input type="checkbox" name="include" value={{row[0]}}>
+        <span>{{row[0]}}: {{row[1]}} {{row[2]}}</span>
+
+        <br>
+        {% endfor %}
+        <input type="submit" class="btn btn-primary" value="submit">
+  </div>
+</div>
+{% endblock %}

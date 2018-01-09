@@ -1,0 +1,32 @@
+{% extends 'layout.html' %}
+
+{% block body %}
+  <div class="container">
+    <table>
+      <tr>
+        <td>id</td>
+        <td>First Name</td>
+        <td>Last Name</td>
+        <td>Email</td>
+        <td>Mobile</td>
+        <td>Landline</td>
+        <td>Postcode</td>
+        <td>Notes</td>
+        <td>Date Added</td>
+      </tr>
+      {% for row in rows %}
+      <tr>
+        <td>{{row[0]}}</td>
+        <td>{{row[1]}}</td>
+        <td>{{row[2]}}</td>
+        <td>{{row[3]}}</td>
+        <td>{{row[4]}}</td>
+        <td>{{row[5]}}</td>
+        <td>{{row[6]}}</td>
+        <td>{{row[7]}}</td>
+        <td>{{row[8]}}</td>
+      </tr>
+      {% endfor %}
+    </table>
+  </div>
+{% endblock %}

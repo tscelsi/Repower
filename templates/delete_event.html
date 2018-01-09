@@ -1,0 +1,9 @@
+{% extends 'layout.html' %}
+{% block body %}
+<div class="container">
+  <form action="/delete_event_active" method="post">
+    <input type="text" name="event_id" value="event id">
+    <input type="submit" class="btn btn-primary" value="Submit">
+  </form>
+</div>
+{% endblock %}

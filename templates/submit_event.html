@@ -1,0 +1,16 @@
+{% extends 'layout.html' %}
+
+{% block body %}
+<div class="container">
+<form method='POST' action="/submit_events">
+  <h3>Enter data in 'events' table:</h3>
+  <div class="form-group">
+    <input type="text" name="date" value="yyyy-mm-dd"><br>
+    <input type="text" name="_type" value="type"><br>
+    <input type="text" name="description" value="description"><br>
+  </div>
+  <input type="submit" class="btn btn-primary" value="submit">
+</form>
+<form method='POST' action="/submit_members">
+</div>
+{% endblock %}

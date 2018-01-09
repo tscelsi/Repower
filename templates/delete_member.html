@@ -1,0 +1,10 @@
+{% extends 'layout.html' %}
+
+{% block body %}
+  <div class="container">
+    <form action="/delete_member_active" method="post">
+      <input type="text" name="member_id" value="member id">
+      <input type="submit" class="btn btn-primary" value="Submit">
+    </form>
+  </div>
+{% endblock %}

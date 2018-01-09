@@ -1,0 +1,21 @@
+{% extends 'layout.html' %}
+
+{% block body %}
+<form action="/submit_members" method="post">
+<div class="container">
+  <h3>Enter member data:</h3>
+  <div class="form-group">
+    <input type="text" name="firstname" value="first name"><br>
+    <input type="text" name="lastname" value="last name"><br>
+    <input type="text" name="email" value="email"><br>
+    <input type="text" name="mobile" value="mobile"><br>
+    <input type="text" name="landline" value="landline"><br>
+    <input type="text" name="postcode" value="postcode"><br>
+    <input type="text" name="suburb" value="suburb"><br>
+    <input type="text" name="notes" value="notes"><br>
+  </div>
+  <input type="submit" class="btn btn-primary" value="submit">
+</form>
+</div>
+
+{% endblock %}
